@@ -1,73 +1,46 @@
-# Welcome to your Lovable project
+# Salary Hoops Score 🏀💰
 
-## Project info
+After the blockbuster Luka Dončić trade, I found myself wondering: are teams actually getting good value for the money they spend on star players? That sparked the idea behind this project — to build a dashboard that measures how efficiently NBA players perform relative to their salaries.
 
-**URL**: https://lovable.dev/projects/bdc6e8d6-424e-457b-8ba9-7e15a73d253a
+## 🎯 Project Goals
 
-## How can I edit this code?
+- Analyze the relationship between player performance and salary
+- Identify underpaid and overpaid players across the league
+- Help visualize how teams manage salary cap value
+- Provide tools to explore value by team, position, and age
 
-There are several ways of editing your application.
+## 📊 Key Metrics
 
-**Use Lovable**
+- **Win Shares per $1M Salary**
+- **Points per $1M**
+- **PER vs. Salary Percentile**
+- **Overall Value Rank**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/bdc6e8d6-424e-457b-8ba9-7e15a73d253a) and start prompting.
+## 🔧 Tools Used
 
-Changes made via Lovable will be committed automatically to this repo.
+- Python (Pandas, NumPy)
+- Lovable (interactive dashboard)
+- Jupyter Notebook (data prep + analysis)
+- GitHub (version control + portfolio)
 
-**Use your preferred IDE**
+## 🔍 Features (Planned or In Progress)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- KPI cards: Best value player, most overpaid, top-value team
+- Filters by **team**, **position**, and **age range**
+- Charts: Scatter plot (performance vs. salary), bar charts, histograms
+- Insight section with key takeaways for analysts or GMs
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📁 Structure
 
-Follow these steps:
+- `/data`: salary and stats files (from Spotrac & Basketball-Reference)
+- `/notebooks`: analysis notebooks
+- `/app`: dashboard deployment (planned)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🚀 Why This Project?
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+As someone who loves both sports and analytics, this project blends two of my biggest interests. It also sharpens skills in data wrangling, visualization, and storytelling — all of which I use in my professional work as a business/data analyst.
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 📌 Status
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Currently merging datasets and cleaning player names. Dashboard build in progress!
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/bdc6e8d6-424e-457b-8ba9-7e15a73d253a) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
