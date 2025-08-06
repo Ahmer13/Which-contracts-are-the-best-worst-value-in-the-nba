@@ -66,6 +66,24 @@ export function DashboardFilters({
               Point Guards
             </button>
             <button
+              onClick={() => onPositionChange('SG')}
+              className="px-3 py-1 text-xs rounded-md bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors"
+            >
+              Shooting Guards
+            </button>
+            <button
+              onClick={() => onPositionChange('SF')}
+              className="px-3 py-1 text-xs rounded-md bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors"
+            >
+              Small Forwards
+            </button>
+            <button
+              onClick={() => onPositionChange('PF')}
+              className="px-3 py-1 text-xs rounded-md bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors"
+            >
+              Power Forwards
+            </button>
+            <button
               onClick={() => onPositionChange('C')}
               className="px-3 py-1 text-xs rounded-md bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors"
             >
