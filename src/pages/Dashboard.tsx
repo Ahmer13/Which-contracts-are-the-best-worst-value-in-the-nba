@@ -34,6 +34,17 @@ export default function Dashboard() {
 
   // Calculate KPIs
   const kpiData: KPIData = useMemo(() => {
+    // Handle empty array case
+    if (filteredPlayers.length === 0) {
+      const defaultPlayer = playersData[0]; // Fallback to first player in dataset
+      return {
+        bestValuePlayer: defaultPlayer,
+        mostOverpaidPlayer: defaultPlayer,
+        bestValueTeam: 'N/A',
+        avgSalaryPerWinShare: 0,
+      };
+    }
+
     const playersWithValue = filteredPlayers.map(player => ({
       ...player,
       winSharesPerMillion: player.winShares / (player.salary / 1000000),
@@ -59,15 +70,19 @@ export default function Dashboard() {
       return acc;
     }, {} as Record<string, { totalWinShares: number; totalSalary: number }>);
 
-    const bestValueTeam = Object.entries(teamEfficiency)
-      .map(([team, data]) => ({
-        team,
-        efficiency: data.totalWinShares / (data.totalSalary / 1000000),
-      }))
-      .reduce((best, current) => current.efficiency > best.efficiency ? current : best).team;
+    const teamEfficiencyEntries = Object.entries(teamEfficiency);
+    const bestValueTeam = teamEfficiencyEntries.length > 0 
+      ? teamEfficiencyEntries
+          .map(([team, data]) => ({
+            team,
+            efficiency: data.totalWinShares / (data.totalSalary / 1000000),
+          }))
+          .reduce((best, current) => current.efficiency > best.efficiency ? current : best).team
+      : 'N/A';
 
-    const avgSalaryPerWinShare = filteredPlayers.reduce((sum, p) => sum + p.salary, 0) / 
-                                filteredPlayers.reduce((sum, p) => sum + p.winShares, 0);
+    const totalSalary = filteredPlayers.reduce((sum, p) => sum + p.salary, 0);
+    const totalWinShares = filteredPlayers.reduce((sum, p) => sum + p.winShares, 0);
+    const avgSalaryPerWinShare = totalWinShares > 0 ? totalSalary / totalWinShares : 0;
 
     return {
       bestValuePlayer,
