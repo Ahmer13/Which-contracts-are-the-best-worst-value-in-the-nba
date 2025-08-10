@@ -32,7 +32,7 @@ Powered by [Lovable](https://lovable.dev)
 ## 📊 Dashboard Preview
 
 [![NBA Dashboard Screenshot](./nbadashboardpreview.png)](https://lovable.dev/projects/bdc6e8d6-424e-457b-8ba9-7e15a73d253a)
-
+*(Click the image to view the live interactive dashboard)*
 ---
 
 ## 📁 Data Sources
